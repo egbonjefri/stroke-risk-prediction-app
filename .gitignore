@@ -1,0 +1,9 @@
+*.Renviron
+*.zip
+.ipynb_ceckpoints
+chromdriver
+.DS_store
+*.DS_store
+*.RData
+*.Rhistory
+*.rds

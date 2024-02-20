@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stroke Predictor - By Jeffery Osagie</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./resources/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+
+    <body>
+
+  
+      
+        <div class="myContainer">
+          <div class="welcome">
+            <h1 style="text-align:center;">Welcome to my Stroke Predictor App</h1>
+            <p>This application utilizes advanced machine learning algorithms to assess your risk of having a stroke. By entering specific health-related features, such as age, blood glucose level, and other relevant health metrics, this tool evaluates your data to provide a personalized stroke risk prediction.</p>
+            <p>The goal is to empower you with insights into your stroke risk, enabling you to take proactive steps towards your health and well-being. Get started by clicking the button below and entering your information.</p>
+            <button id="start">Start Prediction</button>
+          </div>
+            <button id="back" class="round-button blur"></button>
+            <div class="center blur">
+              <form id="dynamic">
+                <div class="wrap">
+                  <div class="question"></div>
+                  <div class="helperText"></div>
+                  <div class="answer"></div>
+                </div>
+              </form>
+            </div>
+            <div class="remaining"></div>
+            <div class="textCenter hidden">
+              <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <div id="infoDiv" class="transition-div">
+            </div>
+          </div>
+          
+
+
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script
+   src="https://code.jquery.com/jquery-3.6.0.min.js"
+   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+   crossorigin="anonymous"></script>    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>   <script src='./resources/script/script.js'></script>
+  
+  </body>
+   
+</html>
