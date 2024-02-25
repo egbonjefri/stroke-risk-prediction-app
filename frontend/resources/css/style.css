@@ -1,26 +1,56 @@
 @charset "UTF-8";
-html {
-  font-size: 2vh;
-}
-@media screen and (min-height: 800px) {
-  html {
-    font-size: 16px;
+
+@media screen and (max-width: 800px) {
+  .welcome h1{
+    font-size: 1.8rem !important;
   }
-}
-@media screen and (max-height: 500px) {
-  html {
-    font-size: 10px;
+  .button{
+    font-size: 0.5rem !important;
+    padding: 0.7rem 1rem !important;
+    margin: 0rem !important;
+    }
+  .welcome p {
+    font-size: 0.85rem !important;
   }
-}
-@media screen and (max-width: 600px) {
-  html {
-    font-size: 2vw;
+  .question, h2{
+    font-size: 1.2rem !important;
   }
-}
-@media screen and (max-width: 400px) {
-  html {
-    font-size: 10px;
+  .review {
+    margin-top: 50% !important
   }
+  .helperText{
+    font-size: 0.6rem !important;
+  }
+  .textarea{
+   width: 50% !important;
+  }
+  .checkbox + label {
+    font-size: 0.85rem !important;
+  }
+  .review-left{
+    width: 100% !important;
+    text-align: center !important;
+    margin-bottom: -55% !important;
+    font-size: 0.8rem !important;
+  }
+ .review-right{
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 0.8rem !important;
+  width: 100% !important;
+  text-align: center;
+  color: lightgray !important;
+ }
+.submit-button{
+  font-size: 1rem !important;
+}
+.question{
+  margin-bottom: 5% !important
+}
+.transition-div{
+  font-size: 1rem !important;
+  margin: 50% auto !important
+}
 }
 
 body {
@@ -69,8 +99,9 @@ body {
 }
 
 .question {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-size: 3rem;
+
 }
 .helperText {
   font-size: 0.8rem;
@@ -179,7 +210,7 @@ body {
 .remaining {
   font-weight: 100;
   position: absolute;
-  bottom: 10%;
+  bottom: 1%;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0.6;
@@ -287,7 +318,7 @@ body {
 
 .sig {
   position: fixed;
-  bottom: 8px;
+  bottom: 1px;
   right: 8px;
   text-decoration: none;
   font-size: 12px;
@@ -307,7 +338,6 @@ body {
 .transition-div {
   display: none;
   margin: 12rem 7.5rem;
-  word-wrap: break-word;
   padding: 20px;
   font-size: 2rem;
   text-align: center;
@@ -324,11 +354,11 @@ body {
   gap: 20px;
   height: 100vh;
   text-align: center; 
-  padding: 0 120px;
+  padding: 0 15%;
 }
 .welcome h1{
   font-weight: 600;
-  font-size: 3rem
+  font-size: 3rem;
 }
 .welcome p {
   font-size: 1.25rem

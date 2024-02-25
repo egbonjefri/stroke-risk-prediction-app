@@ -85,7 +85,7 @@ let everMarried = {
 
 let currentOccupation = {
 	'id': 'currentOccupation',
-	'text': 'What is your current occupation? (Select all that apply)',
+	'text': 'What is your current occupation?',
 	'answer': {
 		'type': 'checkbox',
 		'responses': [
@@ -221,17 +221,17 @@ function nextQuestion(questionID){
 					$('.next').on('click', function(){
 						//save response
 						response = $('textarea').val();
-						if(question.id ==="age" &&Number(response) < 40 || question.id ==="age" && Number(response) > 100){
+						if(!Number(response) || question.id ==="age" &&Number(response) < 40 || question.id ==="age" && Number(response) > 100){
 							$('.helperText').html(helperText);
 							$('.helperText').fadeToggle("slow"); 
 							return
 						}
-						if(question.id ==="bmi" &&Number(response) < 9 ||  question.id ==="bmi" && Number(response) > 74){
+						if(!Number(response) || question.id ==="bmi" &&Number(response) < 9 ||  question.id ==="bmi" && Number(response) > 74){
 							$('.helperText').html(helperText);
 							$('.helperText').fadeToggle("slow"); 
 							return
 						}
-						if(question.id ==="glucoseLevel" &&Number(response) < 0 ||  question.id ==="glucoseLevel" &&  Number(response) > 310){
+						if(!Number(response) || question.id ==="glucoseLevel" &&Number(response) < 0 ||  question.id ==="glucoseLevel" &&  Number(response) > 310){
 							$('.helperText').html(helperText);
 							$('.helperText').fadeToggle("slow"); 
 							return
@@ -438,7 +438,7 @@ function outputResults(){
 		$('.wrap').addClass('blur')
 		setTimeout(function(){
 		
-			var congratHtml = '<h2>All done! Please review your answers before submitting.</h2>';
+			var congratHtml = '<h2 class="review">All done! Please review your answers before submitting.</h2>';
 			var reviewHtml = '';
 			
 			//loop thourgh the history from the back
@@ -461,6 +461,9 @@ function outputResults(){
 
 			$('#confirm').on('click', function(event) {
 				event.preventDefault(); // Prevent default form submission
+				$('.myContainer').animate({
+					scrollTop: 0
+				  }, 200);
 				x = 1;
 				$('.center').addClass('blur');
 				$('#back').addClass('hidden');
@@ -572,8 +575,7 @@ function dig(questionId, count){
 
 function buildBackendRequestUrl(data) {
 	// Base URL with placeholder for values
-	const baseUrl = "http://146.190.53.244:8000/predict/values?";
-  
+	const baseUrl = `${process.env.BASE_URL}/predict/values?`;
 	// Construct query parameters from object data
 	const params = [];
 	for (const [key, value] of Object.entries(data)) {
