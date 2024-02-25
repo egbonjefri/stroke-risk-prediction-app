@@ -575,7 +575,8 @@ function dig(questionId, count){
 
 function buildBackendRequestUrl(data) {
 	// Base URL with placeholder for values
-	const baseUrl = `${process.env.BASE_URL}/predict/values?`;
+	const API_ENDPOINT = '%%API_ENDPOINT%%';
+	const baseUrl = `${API_ENDPOINT}/predict/values?`;
 	// Construct query parameters from object data
 	const params = [];
 	for (const [key, value] of Object.entries(data)) {
@@ -618,7 +619,7 @@ function initialize(){
 	})
 	$('#start').on('click', function(event) {
 	$('.center').removeClass('blur');	
-	$('.welcome').addClass('hidden')
+	$('.welcome').addClass('hidden');
 	nextQuestion();
 	})
 	

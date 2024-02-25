@@ -7,3 +7,4 @@ chromdriver
 *.RData
 *.Rhistory
 *.rds
+*.env
